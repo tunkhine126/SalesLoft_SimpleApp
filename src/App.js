@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import People from './components/people'
+import FrequencyCount from './components/frequencyCount'
 
 const url = 'https://api.salesloft.com/v2/people'
 const key = process.env.REACT_APP_SIMPLEAPP_API_KEY
@@ -8,11 +9,13 @@ const proxyurl = "https://cors-anywhere.herokuapp.com/"
 
 class App extends Component {
 
+// initial state
   state = {
     allPeople: [],
-    button: false
+    buttonToggle: false
   }
 
+  // fetching SalesLoft API 
   componentDidMount() {
     fetch(proxyurl + url, {
       headers: {
@@ -26,11 +29,20 @@ class App extends Component {
       )
     }
 
+    // toggle frequency button function
+    displayFrequency = () => {
+      this.setState(prevState => ({buttonToggle: !prevState.buttonToggle}))
+      console.log(this.state.buttonToggle)
+    }
+  
   render() {
     return (
       <div className="App">
         <h1>SalesLoft People Records</h1>
-          <button>A BUTTON</button>
+          <div className="button">
+            <button onClick={() => this.displayFrequency()}>Frequency</button>
+            </div>
+          {this.state.buttonToggle ? <FrequencyCount /> : null}
         <People allPeople={this.state.allPeople}/>
       </div>
     );
