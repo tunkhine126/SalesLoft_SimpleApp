@@ -16,6 +16,13 @@ code {
   text-align: left;
 }
 
+.button {
+  text-align: center;
+}
+.peopleHeader{
+  text-align: left
+}
+
 .table {
   margin: auto;
   text-align: center;
@@ -30,5 +37,13 @@ code {
 .table td {
   padding-top: 12px;
   padding-bottom: 12px;
+  text-align: left;
+}
+
+.frequencyHeader{
+  text-align: left
+}
+.frequencyTable {
+  margin: auto;
   text-align: left;
 }

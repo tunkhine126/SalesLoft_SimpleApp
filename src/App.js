@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import People from './components/people'
-import FrequencyCount from './components/frequencyCount'
+import FrequencyTable from './components/frequencyTable'
+import { Button } from 'react-bootstrap'
 
 const url = 'https://api.salesloft.com/v2/people'
 const key = process.env.REACT_APP_SIMPLEAPP_API_KEY
@@ -32,17 +33,16 @@ class App extends Component {
     // toggle frequency button function
     displayFrequency = () => {
       this.setState(prevState => ({buttonToggle: !prevState.buttonToggle}))
-      console.log(this.state.buttonToggle)
     }
   
   render() {
     return (
       <div className="App">
-        <h1>SalesLoft People Records</h1>
+        <h1>SalesLoft</h1>
           <div className="button">
-            <button onClick={() => this.displayFrequency()}>Frequency</button>
-            </div>
-          {this.state.buttonToggle ? <FrequencyCount /> : null}
+          <Button onClick={() => this.displayFrequency()} variant="secondary" className="button">Frequency Count</Button>
+           </div><br />
+          {this.state.buttonToggle ? <FrequencyTable allPeople={this.state.allPeople}/> : null}
         <People allPeople={this.state.allPeople}/>
       </div>
     );

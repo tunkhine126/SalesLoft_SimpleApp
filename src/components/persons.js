@@ -1,7 +1,5 @@
 import React from 'react'
 
-// let persons = this.props.people ? this.props.people : null
-
 const Persons = (props) => {
     return ( 
       <tbody>
