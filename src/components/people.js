@@ -8,8 +8,9 @@ const People = (props) => {
 
     return (
       <div>
+        <h4 className="peopleHeader">People records:</h4>
         <div className="persons">
-          <Table className="table">
+          <Table className="table" striped bordered hover size="sm">
           <thead>
             <tr>
               <th>#</th>
