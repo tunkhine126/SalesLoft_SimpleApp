@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.persons {
+  text-align: left;
+}
+
+.table {
+  margin: auto;
+  text-align: center;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
