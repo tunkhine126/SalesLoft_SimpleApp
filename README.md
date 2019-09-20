@@ -18,4 +18,4 @@ Live application can be found [here](https://salesloftsimple-web-app.web.app/)
  Hosting - Firebase 
 
 ## Acknowledgements 
-I'm appreciative of HR and Engineering teams at SalesLoft for allowing me the chance to showcase what I've learned at Flatiron School. Additionally, big big thanks to my Wife for her support and encouragement. 
+I'm appreciative of the HR and Engineering teams at SalesLoft for allowing me the opportunity to showcase some of my knowledge acquired at Flatiron School. Additionally, big big thanks to my Wife for her support and encouragement. 
