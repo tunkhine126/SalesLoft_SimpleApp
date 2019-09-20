@@ -12,7 +12,9 @@ Live application can be found [here](https://salesloftsimple-web-app.web.app/)
 
 ## Frameworks
  Front end - React
+ 
  Styling - Bootstrap and custom CSS
+ 
  Hosting - Firebase 
 
 ## Acknowledgements 
