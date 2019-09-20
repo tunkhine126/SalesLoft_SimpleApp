@@ -4,6 +4,7 @@ import People from './components/people'
 import FrequencyTable from './components/frequencyTable'
 import { Button } from 'react-bootstrap'
 
+
 const url = 'https://api.salesloft.com/v2/people'
 const key = process.env.REACT_APP_SIMPLEAPP_API_KEY
 const proxyurl = "https://cors-anywhere.herokuapp.com/"
