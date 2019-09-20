@@ -12,38 +12,42 @@ code {
     monospace;
 }
 
-.persons {
-  text-align: left;
+.banner{
+  max-width:400px;
+  max-height:300px;
+  width: auto;
+  height: auto;
 }
-
 .button {
-  text-align: center;
+  text-align: left;
 }
 .peopleHeader{
   text-align: left
 }
 
 .table {
-  margin: auto;
+
   text-align: center;
 }
 
 .table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 .table td {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 .frequencyHeader{
   text-align: left
 }
-.frequencyTable {
-  margin: auto;
+.frequencyTable{
+  table-layout: fixed;
+  width: 50%;  
+  margin: center;
   text-align: left;
 }
