@@ -13,7 +13,7 @@ class App extends Component {
 // initial state
   state = {
     allPeople: [],
-    buttonToggle: false
+    buttonToggle: false,
   }
 
   // fetching SalesLoft API 
@@ -38,9 +38,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>SalesLoft</h1>
-          <div className="button">
-          <Button onClick={() => this.displayFrequency()} variant="secondary" className="button">Frequency Count</Button>
+        <img className="banner" src='https://1d9jx8pre4-flywheel.netdna-ssl.com/wp-content/uploads/2019/05/brand-page-tabs_logo-1.png' alt="Logo" />
+          <div className="button" id="button">
+          <Button onClick={() => this.displayFrequency()} variant="secondary" size="sm" className="button">Display Frequency Count</Button>
            </div><br />
           {this.state.buttonToggle ? <FrequencyTable allPeople={this.state.allPeople}/> : null}
         <People allPeople={this.state.allPeople}/>

@@ -7,14 +7,13 @@ const FrequencyTable = (props) => {
   const emails = []
   const frequency = {};
 
-  //gathering all emails into an array
+  //gathering all emails from props into an array
   for (let all of people) {
     emails.push(all.email_address);
   }
 
   //iterating over the email array
   //looping each email and splitting each character
-
   emails.forEach(email => {
     for (let i = 0; i < email.length; i++) {
       let character = email.charAt(i);
@@ -22,32 +21,35 @@ const FrequencyTable = (props) => {
     }
   })
 
-  //setting key / value pair
+  //creating an array of objects and setting key / value pair
   const result = Object.keys(frequency).map(character => ({ character, count: frequency[character] }));
-  const sorted = result.sort((a, b) => b.count - a.count);
+  //sorting the array by frequency count
+  const sorted = result.sort((a, b) => (b.count > a.count) ? 1 : -1)
 
   return(
     <div>
       <h4 className="frequencyHeader">Frequency count of all unique characters in email addresses:</h4>
-      <Table className="frequencyTable" striped bordered hover size="sm">
+      <Table className="col-4 mx-left" striped bordered hover size="sm" >
           <thead>
             <tr>
               <th>Character</th>
               <th>Count</th>
-              </tr>
-              </thead>
-              {sorted.map((item, i) => {
-                return (
-                  <tbody item={item} key={i}>
-                    <tr className="table">
-                      <td>{item.character}</td>
-                      <td>{item.count}</td>
-                    </tr>
-                  </tbody>
-              )})}
-          </Table>
+            </tr>
+          </thead>
+            {sorted.map((item, i) => {
+            return (
+              <tbody item={item} key={i}>
+                <tr className="table">
+                  <td>{item.character}</td>
+                  <td>{item.count}</td>
+                </tr>
+                </tbody>
+              )}
+            )
+          }
+        </Table>
       </div>
     )
-}
+  }
 
 export default FrequencyTable;
