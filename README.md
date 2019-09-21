@@ -20,7 +20,7 @@ Live application can be found [here](https://salesloftsimple-web-app.web.app/)
 ## The process and challenges
 This simple app certainly presented a number of challenges! Through research, perseverance, and a ton of coffee, I was able complete this challenge but definitely see room for improvement. 
 
-The first challenge thinking about the design and architecture of the simple app. What components did I want to build and where would I keep the logic? I tried to keep the components as simple as possible and focused on best practices and good code structure. For me this meant keeping the API fetch and state and the App level and passing down props into my components. 
+The first challenge was thinking about the design and architecture of the simple app. What components did I want to build and where would I keep the logic? I tried to keep the components as simple as possible and focused on best practices and good code structure. For me this meant keeping the API fetch and state and the App level and passing down props into my components. 
 
 The next hurdle was getting past the CORS issue which presented its ugly head very early on in the console. After some research I settled into the solution of sending my API request through a CORS proxy server. 
 
