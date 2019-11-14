@@ -26,30 +26,31 @@ const FrequencyTable = (props) => {
   //sorting the array by frequency count
   const sorted = result.sort((a, b) => (b.count > a.count) ? 1 : -1)
 
-  return(
+  return (
     <div>
       <h4 className="frequencyHeader">Frequency count of all unique characters in email addresses:</h4>
       <Table className="col-4 mx-left" striped bordered hover size="sm" >
-          <thead>
-            <tr>
-              <th>Character</th>
-              <th>Count</th>
-            </tr>
-          </thead>
-            {sorted.map((item, i) => {
-            return (
-              <tbody item={item} key={i}>
-                <tr className="table">
-                  <td>{item.character}</td>
-                  <td>{item.count}</td>
-                </tr>
-                </tbody>
-              )}
-            )
-          }
-        </Table>
-      </div>
-    )
-  }
+        <thead>
+          <tr>
+            <th>Character</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        {sorted.map((item, i) => {
+          return (
+            <tbody item={item} key={i}>
+              <tr className="table">
+                <td>{item.character}</td>
+                <td>{item.count}</td>
+              </tr>
+            </tbody>
+          )
+        }
+        )
+        }
+      </Table>
+    </div>
+  )
+}
 
 export default FrequencyTable;
