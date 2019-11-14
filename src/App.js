@@ -13,71 +13,72 @@ const proxyurl = "https://cors-anywhere.herokuapp.com/"
 
 class App extends Component {
 
-// initial state
+  // initial state
   state = {
     allPeople: [],
     buttonToggle: false,
-    loading: undefined,
+    loading: true,
     displyFrequencyTable: false,
   }
 
   // fetching SalesLoft API 
   componentDidMount() {
+
     fetch(proxyurl + url, {
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${key}`,
-        }
-      })
-      .then(res => res.json())
-      .then(res => this.setState({ 
-        allPeople: res, 
-        loading: true 
-      })
-      )
-    }
+        'Content-Type': "application/json",
+        'Accept': "application/json"
+      }
+    })
+    .then(res => res.json())
+    .then(res => this.setState({ 
+      allPeople: res, 
+      loading: false 
+    })
+    )
+  }
 
-    // toggle frequency button function
-    displayFrequency = () => {
-      this.setState(prevState => ({buttonToggle: !prevState.buttonToggle}))
-    }
+  // toggle frequency button function
+  displayFrequency = () => {
+    this.setState(prevState => ({buttonToggle: !prevState.buttonToggle}))
+  }
 
-    // displayFrequencyButton = () => {
-    //   return(
-    //     <div className="button" id="button">
-    //       <Button onClick={() => this.displayFrequency()} variant="secondary" size="sm" className="button">Display Frequency Count</Button>
-    //     </div>
-    //   )
-    // }
+  // displayFrequencyButton = () => {
+  //   return(
+  //     <div className="button" id="button">
+  //       <Button onClick={() => this.displayFrequency()} variant="secondary" size="sm" className="button">Display Frequency Count</Button>
+  //     </div>
+  //   )
+  // }
 
-    // displayFrequencyTable = () => {
-    //   return (
-    //     <People allPeople={this.state.allPeople} />
-    //   )
-    // }
+  // displayFrequencyTable = () => {
+  //   return (
+  //     <People allPeople={this.state.allPeople} />
+  //   )
+  // }
 
-    // getTables = () => {
-    //   if(this.state.loading)
-    //     return (
-    //       <div>
-    //         <ReactLoading className="loading" type="spokes" color="#2897D3" width="15%" />
-    //       </div>
-    //     )
-    //   else
-    //     return (
-    //       <div>
-    //         {this.displayFrequencyButton()}
-    //         {this.displayFrequencyTable()}
-    //       </div>
-    //     )
-    // }
+  // getTables = () => {
+  //   if(this.state.loading)
+  //     return (
+  //       <div>
+  //         <ReactLoading className="loading" type="spokes" color="#2897D3" width="15%" />
+  //       </div>
+  //     )
+  //   else
+  //     return (
+  //       <div>
+  //         {this.displayFrequencyButton()}
+  //         {this.displayFrequencyTable()}
+  //       </div>
+  //     )
+  // }
   
   render() {
     return (
       <div className="App">
-        {!this.state.loading ? (
-          <div >
+        { this.state.loading ? (
+          <div>
             <ReactLoading className="loader" type={"bars"} color={"grey"} />
             Loading!
           </div>
