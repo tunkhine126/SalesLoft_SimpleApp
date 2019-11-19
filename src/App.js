@@ -30,11 +30,11 @@ class App extends Component {
 
   fetchPeople = (pageNum = 1, per_page = this.state.per_page) => {
     const full_url = [
-      proxyurl + url,
-      `?page=${pageNum}`,
-      `&per_page=${per_page}`,
+      proxyurl + url +
+      `?page=${pageNum}`+
+      `&per_page=${per_page}`+
       "&sorting=created_at"
-    ].join('')
+    ]
 
     fetch(full_url, {
       headers: {

@@ -13,16 +13,16 @@ function PageButtons(props) {
         onClick={() => props.fetchPeople(props.page - 1)}
         disabled={props.page <= 1 || props.loading}>
         Previous 25 results
-        </Button>
+      </Button>
       &nbsp;
-        <Button
+      <Button
         className="button"
         variant="secondary"
         size="sm"
         onClick={() => props.fetchPeople(props.page + 1)}
         disabled={!props.nextPage || props.loading}>
         Next 25 results
-        </Button>
+      </Button>
       <div className="page-results">
         <b>Page {props.page} of {Math.ceil(total_records / props.perPage)}</b>
       </div>
