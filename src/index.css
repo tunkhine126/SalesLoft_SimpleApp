@@ -26,7 +26,6 @@ code {
 }
 
 .table {
-
   text-align: center;
 }
 
@@ -46,12 +45,27 @@ code {
   text-align: left
 }
 .frequencyTable{
-  table-layout: fixed;
-  width: 50%;  
-  margin: center;
-  text-align: left;
+  text-align: center;
 }
 
 .loader {
 	margin: 40px auto 0px;
+}
+
+.page-btn-container {
+  margin: 20px auto;
+  display:block;
+}
+
+.page-results {
+  margin: 5px auto;
+}
+
+.frequency-btn-container {
+  margin: 20px auto;
+  display:block;
+}
+
+.button-container {
+  text-align:center
 }

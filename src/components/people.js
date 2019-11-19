@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap'
 
 const People = (props) => {
 
-    let persons = props.allPeople ? props.allPeople : null
+    const persons = props.allPeople ? props.allPeople : null
 
     return (
       <div>

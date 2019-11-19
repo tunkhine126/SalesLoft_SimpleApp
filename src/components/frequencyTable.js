@@ -27,7 +27,7 @@ const FrequencyTable = (props) => {
   const sorted = result.sort((a, b) => (b.count > a.count) ? 1 : -1)
 
   return (
-    <div>
+    <div className="frequency-table">
       <h4 className="frequencyHeader">Frequency count of all unique characters in email addresses:</h4>
       <Table className="col-4 mx-left" striped bordered hover size="sm" >
         <thead>
