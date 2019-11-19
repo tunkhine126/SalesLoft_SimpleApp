@@ -84,7 +84,7 @@ class App extends Component {
                   loading={this.state.loading} 
                   fetchPeople={this.fetchPeople}
                 />
-                <FrequencyButton display={this.displayFrequency}/>
+                <FrequencyButton display={this.displayFrequency} toggle={this.state.buttonToggle}/>
               </div>} 
               {ButtonToggle ? <FrequencyTable allPeople={this.state.allPeople} /> : null}
             <People allPeople={this.state.allPeople} />

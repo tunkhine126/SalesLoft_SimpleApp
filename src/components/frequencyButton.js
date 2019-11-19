@@ -9,7 +9,7 @@ function FrequencyButton(props) {
         className="button"
         variant="secondary"
         size="sm">
-        Display Frequency Count
+        {props.toggle ? 'Hide' : 'Display'} Frequency Count
         </Button>
     </div>
   )
