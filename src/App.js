@@ -22,24 +22,14 @@ class App extends Component {
     page: 1,
     next_page: 25,
     lastPage: 14,
-
     per_page: 25,
-    newPerPage: 25,
 
   }
 
-  // fetching SalesLoft API 
-  componentDidMount() {
-    // this.fetchPeople()
-  }
-
-  prevPage = () => {
-    this.setState({ page: this.state.page - 1 })
-  }
-  
-  nextPage = () => {
-    this.setState({ page: this.state.page + 1 })
-  }
+  // fetching SalesLoft API (no longer needed)
+  // componentDidMount() {
+  //   this.fetchPeople()
+  // }
 
   // fetchPeople = (pageNum = 1, per_page = this.state.per_page) => {
   //   const full_url = [
@@ -75,6 +65,15 @@ class App extends Component {
     this.setState(prevState => ({buttonToggle: !prevState.buttonToggle}))
   }
 
+  // pagination controls
+  prevPage = () => {
+    this.setState({ page: this.state.page - 1 })
+  }
+
+  nextPage = () => {
+    this.setState({ page: this.state.page + 1 })
+  }
+  
   render() {
 
     const ButtonToggle = this.state.buttonToggle
