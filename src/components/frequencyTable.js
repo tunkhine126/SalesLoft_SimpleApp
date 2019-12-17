@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap'
 
 const FrequencyTable = (props) => {
 
-  const people = props.allPeople.data
+  const people = props.allPeople
   const emails = []
   const frequency = {};
 

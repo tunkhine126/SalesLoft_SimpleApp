@@ -10,8 +10,8 @@ function PageButtons(props) {
         className="button"
         variant="secondary"
         size="sm"
-        onClick={() => props.fetchPeople(props.page - 1)}
-        disabled={props.page <= 1 || props.loading}>
+        onClick={() => props.prevPage()}
+        disabled={props.page <= 1}>
         Previous 25 results
       </Button>
       &nbsp;
@@ -19,8 +19,8 @@ function PageButtons(props) {
         className="button"
         variant="secondary"
         size="sm"
-        onClick={() => props.fetchPeople(props.page + 1)}
-        disabled={!props.nextPage || props.loading}>
+        onClick={() => props.nextPage()}
+        disabled={props.page >= 14}>
         Next 25 results
       </Button>
       <div className="page-results">

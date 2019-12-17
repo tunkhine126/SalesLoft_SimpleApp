@@ -19,7 +19,7 @@ const People = (props) => {
               <th>Title</th>
             </tr>
           </thead>
-            {persons.data ? persons.data.map((person, i) => {
+            {persons ? persons.map((person, i) => {
               return (<Persons person={person} key={i} index={i} className="table">
               </Persons>)
             }) : null}
